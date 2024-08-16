@@ -1,0 +1,283 @@
+html{
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.bigtopic:hover, .side>div:hover{
+  opacity: .50;
+  cursor: pointer;
+}
+h3{
+  width: 100%;
+  padding-top: 50px;
+}
+
+
+/******************************************
+/* LAYOUT
+/*****************header**************************/
+header {
+  position: absolute;
+  width: 180px;
+  max-height: 1500px;
+}
+header>nav{
+  padding: 20px 0 10px 10%;
+  font-size: 20px;
+}
+header div>*:hover{
+  cursor: pointer;
+  color: blue;
+}
+#menu, .hfirst>label{
+  display: none;
+}
+header span{
+  display: block;
+}
+.logo{
+  width: 40%;
+}
+.join{
+  font-size: 17px;
+  font-weight: 700;
+  color: yellow;
+  margin: 7px;
+}
+.login{
+  font-size: 15px;
+}
+.search>input{
+  background: none;
+  border: none;
+  width: 130px;
+  height: 50px;
+}
+.search>input::placeholder{
+  font-size: 20px;
+}
+.search>input:focus{
+  position: relative;
+  bottom: 20px;
+  width: 300px;
+  height: 50px;
+}
+.login~span{
+  color: gray;
+  line-height: 40px;
+}
+.login+span{
+  margin-top: 30px;
+}
+
+/******************main******************/
+
+main{
+  margin: 0 1% 0 200px;
+}
+.bigtopic{
+  float: left;
+  width: 60%;
+  height: 500px;
+}
+h1{
+  font-size: 30px;
+}
+.bigtopic span{
+  font-size: 20px;
+}
+.bigtopic>img{
+  width: 100%;
+}
+
+h1, h2{
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+/******side*******/
+
+.side{
+  width: 38%;
+  float: right;
+}
+.side div{
+  width: 98%;
+  border-bottom: 1px solid gray;
+}
+.side span{
+  font-size: 12px;
+  font-weight: 700;
+}
+.side h2{
+  font-size: 20px;
+}
+
+/******article*******/
+
+article>section{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article div{
+  width: 30%;
+}
+article h2{
+  font-size: 20px;
+}
+.las-two>p{
+  font-size: 10px;
+}
+article span{
+  font-size: 10px;
+  font-weight: 700;
+}
+.asi{
+  order: 3;
+}
+.asi>img{
+  width: 100%;
+  height: 100%;
+}
+.asi+div{
+  order: 1;
+}
+.asp{
+  order: 2;
+  color: grey;
+  font-size: 15px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 700px){
+  h3+hr{
+    display: none;
+  }
+  article>section{
+    display: block;
+    width: 96%;
+    margin-left: 2%;
+  }
+  article div{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .bigtopic{
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+  main .bigtopic img{
+    width: 98%;
+    height: auto;
+    margin-left: 1%;
+  }
+  .side{
+    width: 98%;
+    margin-left: 1%;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 900px){
+  header{
+    position: relative;
+    width: 100%;
+    /* background: linear-gradient(160deg,
+    rgba(4,255,3,1) 0%,
+    rgba(0,255,240,1) 60%); */
+  }
+  main{
+    margin: 0;
+  }
+  header>nav{
+    padding: 0;
+    overflow-y: hidden;
+  }
+  .hfirst{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hfirst>img{
+    float: left;
+    width: 20%;
+  }
+  .hfirst>label{
+    display: inline-block;
+  }
+  #menu+div{
+    display: none;
+  }
+  #menu:checked+div{
+    display: block;
+  }
+  .htwo{
+    margin-top: 50px;
+    display: flex;
+    flex-grow: row wrap;
+  }
+  .search>input:focus{
+    width: 100%;
+    position: static;
+  }
+  .login~span{
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .bigtopic img{
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  
+  .side h2{
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .bigtopic{
+    width: 55%;
+  }
+  .bigtopic img{
+    max-height: 385px;
+  }
+  .side h2{
+    font-size: 25px;
+  }
+  article h2{
+    font-size: 30px;
+  }
+  .asp{
+    font-size: 20px;
+  }
+}
